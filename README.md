@@ -1,1 +1,1 @@
-# Segmentaci-n-de-objetos-3D-SAM-NeRF-
+# Segmentación-de-objetos-3D-SAM-NeRF-
