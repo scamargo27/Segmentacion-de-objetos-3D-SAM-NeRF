@@ -1,6 +1,6 @@
 # Segmentación-de-objetos-3D-SAM-NeRF
 
-##INSTALACIÓN
+## **INSTALACIÓN**
 
 Debido a que SAM-NeRF requiere varias dependencias específicas, se recomienda crear un enviroment mediante [Anaconda](https://www.anaconda.com/download/success) para su implementación.
 
