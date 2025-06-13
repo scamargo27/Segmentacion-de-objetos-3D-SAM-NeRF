@@ -13,4 +13,4 @@ python -m pip install --upgrade pip
 ### **2. Clona el repositorio e instala los paquetes requeridos**
 ```
 git clone https://github.com/scamargo27/Segmentacion-de-objetos-3D-SAM-NeRF.git Explore-Sam-in-NeRF
-``
+``` 
