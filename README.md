@@ -1,4 +1,4 @@
-# Segmentación-de-objetos-3D-SAM-NeRF
+# Segmentación deo bjetos 3D con SAM-NeRF
 
 ## **INSTALACIÓN**
 
