@@ -62,7 +62,7 @@ Descarga el contenido del mismo mediante el script de nuestro repositorio.
 ```
 bash dataset.sh
 ```
-**¿Eres parte de la comunidad UIS?** Puedes probar con nuestras escenas [Cubículo de Biblioteca-UIS]() y [Auditorio Ágora-UIS]()
+**¿Eres parte de la comunidad UIS?** Puedes probar con nuestras escenas [Cubículo360 (Biblioteca-UIS)](https://drive.google.com/drive/folders/1eDXjGIb3tiUpDG_WdFCICe-svnWkiToB?usp=sharing) y [Auditorio Ágora-UIS]()
 
 **_Atención:_** Si no deseas trabajar con ninguna de estas escenas, asegúrate de crear la ruta _/data/machine/data/mipnerf360_. En esta carpeta _(mipnerf360)_ deberán ser almacenadas las escenas con las que deseas implementar el modelo SAM-NeRF.
 
@@ -72,6 +72,7 @@ Una vez seleccionada la escena a entrenar, realiza un preprocesamiento de datos 
 bash samnerf/preprocessing/mipnerf360.sh scene json
 ```
 
+Posteriormente, ejecuta el entrenamiento (ejemplo con Cubiculo360): 
 ``` 
-python -m samnerf.train samnerf_no_distill   --data /data/machine/data/mipnerf360/room   --vis viewer+wandb   --viewer.websocket-port 7007
+python -m samnerf.train samnerf_no_distill   --data /data/machine/data/mipnerf360/Cubiculo360   --vis viewer+wandb   --viewer.websocket-port 7007
 ``` 
