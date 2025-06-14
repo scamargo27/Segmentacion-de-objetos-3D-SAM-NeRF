@@ -67,8 +67,9 @@ bash dataset.sh
 **_Atención:_** Si no deseas trabajar con ninguna de estas escenas, asegúrate de crear la ruta _/data/machine/data/mipnerf360_. En esta carpeta _(mipnerf360)_ deberán ser almacenadas las escenas con las que deseas implementar el modelo SAM-NeRF.
 
 Una vez seleccionada la escena a entrenar, realiza un preprocesamiento de datos para obtener los archivos json necesarios para entrenar Nerf en Nerfstudio:
-``` 
-bash samnerf/preprocessing/mipnerf360.sh _**replace with scene name**_ json
+```
+#replace "scene" with your scene name
+bash samnerf/preprocessing/mipnerf360.sh scene json
 ```
 
 ``` 
