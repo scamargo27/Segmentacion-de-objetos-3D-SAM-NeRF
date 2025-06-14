@@ -89,10 +89,10 @@ Una vez realizado el proceso de Colmap sobre tu dataset, los siguientes pasos lo
 También es necesario realizar el preprocesamiento de datos de para obtener los archivos json necesarios para entrenar Nerf en Nerfstudio.
 
 ```
-#replace "scene" with your scene name
-bash samnerf/preprocessing/mipnerf360.sh scene json
+#reemplaza "scene" con el nombre de tu escena
+bash samnerf/preprocessing/mipnerf360.sh {scene} json
 ```
-Asimismo, es fundamental generar el archivo _**poses_bounds.npy**_. Para ello, es necesario ejecutar el script _**imgs2poses**_ desde el folder LLFF.
+Asimismo, es fundamental generar el archivo _poses_bounds.npy_. Para ello, es necesario ejecutar el script _imgs2poses_ desde el folder LLFF.
 ```
 cd LLFF
 python imgs2poses.py /ruta/de/tu/dataset
