@@ -53,7 +53,15 @@ Después de compilar, el visor está disponible en la siguiente url: http://loca
 
 **Nota:** Tenga en cuenta que cada vez que quiera visualizar el entrenamiento o los resultados de alguna escena debe ejecutar los comandos de yarn en una consola en paralelo al proceso deseado.
 
+## ENTRENA TU PRIMER MODELO 
 
+Puedes entrenar con diversas escenas del Dataset de [Mip-NeRF 360](https://jonbarron-info.translate.goog/mipnerf360/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc).
+
+Descarga el contenido del mismo mediante el script de nuestro repositorio.
+
+```
+bash dataset.sh
+```
 
 
 
