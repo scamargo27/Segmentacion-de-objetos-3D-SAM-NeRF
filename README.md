@@ -84,7 +84,7 @@ Para entrenar con tus propios datos, se recomienda crear otro enviroment con Ner
 
 Una vez creado este enviroment, debes instalar [Colmap](https://docs.nerf.studio/quickstart/custom_dataset.html) y aplicarlo a tu conjunto de datos para obtener la mayoría de los archivos fundamentales para el proceso de entrenamiento con SAM-NeRF. 
 
-Una vez realizado el proceso de Colmap sobre tu dataset, los siguientes pasos los debes implementar desde el enviroment de  samnerf: 
+Una vez realizado el proceso de Colmap sobre tu dataset, los siguientes pasos los debes implementar desde el enviroment de  samnerf. 
 
 También es necesario realizar el preprocesamiento de datos de para obtener los archivos json necesarios para entrenar Nerf en Nerfstudio.
 
