@@ -55,13 +55,16 @@ Después de compilar, el visor está disponible en la siguiente url: http://loca
 
 ## ENTRENA TU PRIMER MODELO 
 
-Puedes entrenar con diversas escenas del Dataset de [Mip-NeRF 360](https://jonbarron-info.translate.goog/mipnerf360/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc).
+Puedes entrenar con diversas escenas optimizadas del Dataset de [Mip-NeRF 360](https://jonbarron-info.translate.goog/mipnerf360/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc).
 
 Descarga el contenido del mismo mediante el script de nuestro repositorio.
 
 ```
 bash dataset.sh
 ```
+Si no deseas trabajar con ninguna de estas escenas, asegúrate de crear la ruta /data/machine/data/mipnerf360. En esta carpeta (mipnerf360) deberán ser almacenadas las escenas con las que deseas implementar el modelo SAM-NeRF.
+
+**¿Eres parte de la comunidad UIS?** Puedes probar con nuestras escenas [Cubículo de Biblioteca-UIS]() y [Auditorio Ágora-UIS]()
 
 
 
