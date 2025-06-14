@@ -32,3 +32,15 @@ wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth
 wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
 ```
 ### **4. Aloja tu propio visor**
+
+Asegúrate de tener 'viser' instalado.
+
+```
+pip install viser==0.0.5
+```
+
+Además, asegúrate de que node.js y yarn estén disponibles en tu equipo. Consulta [aquí](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04)  para saber cómo instalar node.js.
+
+
+
+
