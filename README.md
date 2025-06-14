@@ -49,6 +49,10 @@ yarn
 yarn start
 ```
 
+Después de compilar, el visor está disponible en la siguiente url: http://localhost:4000/?websocket_url=ws://localhost:7007
+
+**Nota:** Tenga en cuenta que cada vez que quiera visualizar el entrenamiento o los resultados de alguna escena debe ejecutar los comandos de yarn en una consola en paralelo al proceso deseado.
+
 
 
 
