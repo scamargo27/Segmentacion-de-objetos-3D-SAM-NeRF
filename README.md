@@ -69,7 +69,7 @@ bash dataset.sh
 Una vez seleccionada la escena a entrenar, realiza un preprocesamiento de datos para obtener los archivos json necesarios para entrenar Nerf en Nerfstudio:
 ```
 #replace "scene" with your scene name
-bash samnerf/preprocessing/mipnerf360.sh scene json
+bash samnerf/preprocessing/mipnerf360.sh {scene} json
 ```
 
 Posteriormente, ejecuta el entrenamiento (ejemplo con Cubiculo360): 
@@ -79,7 +79,11 @@ python -m samnerf.train samnerf_no_distill   --data /data/machine/data/mipnerf36
 
 ## ENTRENA CON TUS PROPIOS DATOS 
 
-Para entrenar con tus propios datos, también es necesario realizar el preprocesamiento de datos de para obtener los archivos json necesarios para entrenar Nerf en NerfStudio:
+Para entrenar con tus propios datos, se recomienda crear otro enviroment con Nerfstudio, esto con el propósito de evitar problemas entre dependencias. Sigue el tutorial de esta [página](https://docs.nerf.studio/quickstart/installation.html) para crear tu enviroment con Nerfstudio.
+
+Una vez creado este enviroment, debes instalar [Colmap](https://docs.nerf.studio/quickstart/custom_dataset.html) y aplicarlo a tu conjunto de datos para obtener la mayoría de los archivos fundamentales para el proceso de entrenamiento con SAM-NeRF. 
+
+Una vez realizado el proceso de Colmap sobre tu dataset, también es necesario realizar el preprocesamiento de datos de para obtener los archivos json:
 
 ```
 #replace "scene" with your scene name
