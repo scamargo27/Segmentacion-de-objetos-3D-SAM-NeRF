@@ -41,6 +41,15 @@ pip install viser==0.0.5
 
 Además, asegúrate de que node.js y yarn estén disponibles en tu equipo. Consulta [aquí](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04)  para saber cómo instalar node.js.
 
+Ejecuta los siguientes comandos para tener tu propio visor en tu pc.
+
+```
+cd nerfstudio/viewer/app
+yarn
+yarn start
+```
+
+
 
 
 
