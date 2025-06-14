@@ -68,13 +68,14 @@ bash dataset.sh
 
 Una vez seleccionada la escena a entrenar, realiza un preprocesamiento de datos para obtener los archivos json necesarios para entrenar Nerf en Nerfstudio:
 ```
-#replace "scene" with your scene name
+#reemplaza "scene" con el nombre de tu escena
 bash samnerf/preprocessing/mipnerf360.sh {scene} json
 ```
 
-Posteriormente, ejecuta el entrenamiento (ejemplo con Cubiculo360): 
-``` 
-python -m samnerf.train samnerf_no_distill   --data /data/machine/data/mipnerf360/Cubiculo360   --vis viewer+wandb   --viewer.websocket-port 7007
+Posteriormente, ejecuta el entrenamiento: 
+```
+cd Explore-Sam-in-NeRF
+python -m samnerf.train samnerf_no_distill   --data /data/machine/data/mipnerf360/nombre_de_tu_escena   --vis viewer+wandb   --viewer.websocket-port 7007
 ``` 
 
 ## ENTRENA CON TUS PROPIOS DATOS 
@@ -83,13 +84,28 @@ Para entrenar con tus propios datos, se recomienda crear otro enviroment con Ner
 
 Una vez creado este enviroment, debes instalar [Colmap](https://docs.nerf.studio/quickstart/custom_dataset.html) y aplicarlo a tu conjunto de datos para obtener la mayoría de los archivos fundamentales para el proceso de entrenamiento con SAM-NeRF. 
 
-Una vez realizado el proceso de Colmap sobre tu dataset, también es necesario realizar el preprocesamiento de datos de para obtener los archivos json:
+Una vez realizado el proceso de Colmap sobre tu dataset, los siguientes pasos los debes implementar desde el enviroment de  samnerf: 
+
+También es necesario realizar el preprocesamiento de datos de para obtener los archivos json necesarios para entrenar Nerf en Nerfstudio.
 
 ```
 #replace "scene" with your scene name
 bash samnerf/preprocessing/mipnerf360.sh scene json
 ```
 Asimismo, es fundamental generar el archivo _**poses_bounds.npy**_. Para ello, es necesario ejecutar el script _**imgs2poses**_ desde el folder LLFF.
+```
+cd LLFF
+python imgs2poses.py /ruta/de/tu/dataset
+```
+
+Finalmente, ejecuta el entrenamiento: 
+```
+cd Explore-Sam-in-NeRF
+python -m samnerf.train samnerf_no_distill   --data /data/machine/data/mipnerf360/nombre_de_tu_escena   --vis viewer+wandb   --viewer.websocket-port 7007
+```
+**Nota:** Recuerda que tu dataset y todos sus archivos correspondientes deben estar en la ruta _/data/machine/data/mipnerf360_.
+
+
 
 
 
