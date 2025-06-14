@@ -33,7 +33,7 @@ wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
 ```
 ### **4. Aloja tu propio visor**
 
-Asegúrate de tener 'viser' instalado.
+Asegúrate de tener _"viser"_ instalado.
 
 ```
 pip install viser==0.0.5
@@ -62,9 +62,15 @@ Descarga el contenido del mismo mediante el script de nuestro repositorio.
 ```
 bash dataset.sh
 ```
-Si no deseas trabajar con ninguna de estas escenas, asegúrate de crear la ruta /data/machine/data/mipnerf360. En esta carpeta (mipnerf360) deberán ser almacenadas las escenas con las que deseas implementar el modelo SAM-NeRF.
-
 **¿Eres parte de la comunidad UIS?** Puedes probar con nuestras escenas [Cubículo de Biblioteca-UIS]() y [Auditorio Ágora-UIS]()
 
+**_Atención:_** Si no deseas trabajar con ninguna de estas escenas, asegúrate de crear la ruta _/data/machine/data/mipnerf360_. En esta carpeta _(mipnerf360)_ deberán ser almacenadas las escenas con las que deseas implementar el modelo SAM-NeRF.
 
+Una vez seleccionada la escena a entrenar, realiza un preprocesamiento de datos para obtener los archivos json necesarios para entrenar Nerf en Nerfstudio:
+``` 
+bash samnerf/preprocessing/mipnerf360.sh _**replace with scene name**_ json
+```
 
+``` 
+python -m samnerf.train samnerf_no_distill   --data /data/machine/data/mipnerf360/room   --vis viewer+wandb   --viewer.websocket-port 7007
+``` 
