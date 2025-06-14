@@ -1,4 +1,4 @@
-# Segmentación deo bjetos 3D con SAM-NeRF
+# Segmentación de objetos 3D con SAM-NeRF
 
 ## **INSTALACIÓN**
 
@@ -76,3 +76,18 @@ Posteriormente, ejecuta el entrenamiento (ejemplo con Cubiculo360):
 ``` 
 python -m samnerf.train samnerf_no_distill   --data /data/machine/data/mipnerf360/Cubiculo360   --vis viewer+wandb   --viewer.websocket-port 7007
 ``` 
+
+## ENTRENA CON TUS PROPIOS DATOS 
+
+Para entrenar con tus propios datos, también es necesario realizar el preprocesamiento de datos de para obtener los archivos json necesarios para entrenar Nerf en NerfStudio:
+
+```
+#replace "scene" with your scene name
+bash samnerf/preprocessing/mipnerf360.sh scene json
+```
+Asimismo, es fundamental generar el archivo _**poses_bounds.npy**_. Para ello, es necesario ejecutar el script _**imgs2poses**_ desde el folder LLFF.
+
+
+
+
+
